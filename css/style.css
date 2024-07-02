@@ -35,6 +35,32 @@
     --sidebar-width: 280px;
     --content-max-width: 860px;
 }
+/*NAVBAR*/
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #000000; /* Example background color */
+}
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-items {
+    display: none; /* This is for the menu items to be hidden initially */
+}
+
+@media (max-width: 768px) {
+    .menu-items {
+        display: none; /* Hide the menu items on smaller screens */
+    }
+}
+
 
 *,
 *::before,
