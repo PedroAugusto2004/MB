@@ -63,63 +63,6 @@
 
 /*Workout video HOME page*/
 
-
-
-.sidebar {
-    width: 250px;
-    background-color: #111;
-    color: white;
-    padding: 20px;
-    height: 100vh;
-    position: fixed;
-    overflow: auto;
-}
-
-.sidebar .logo img {
-    width: 100%;
-    height: auto;
-}
-
-.sidebar nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar nav ul li {
-    margin: 20px 0;
-}
-
-.sidebar nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.sidebar .social-media a {
-    display: inline-block;
-    margin: 10px 5px;
-}
-
-.sidebar .social-media img {
-    width: 24px;
-    height: 24px;
-}
-
-.content {
-    margin-left: 80px; /* Adjust this value based on your sidebar width */
-    padding: 20px;
-    flex-grow: 1;
-}
-
-.content header h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.content header p {
-    margin: 5px 0;
-}
-
 .video-container {
     margin-top: 20px;
     position: relative;
