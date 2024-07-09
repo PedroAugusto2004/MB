@@ -29,10 +29,10 @@
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     /* Font Sizes */
-    --font-normal: 1em;
+    --font-normal: 2.0em;
     --font-small: 0.8125rem;
     /* Sidebar */
-    --sidebar-width: 280px;
+    --sidebar-width: 242px;
     --content-max-width: 860px;
 }
 /*NAVBAR*/
@@ -61,6 +61,81 @@
     }
 }
 
+/*Workout video HOME page*/
+
+
+
+.sidebar {
+    width: 250px;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    overflow: auto;
+}
+
+.sidebar .logo img {
+    width: 100%;
+    height: auto;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar .social-media a {
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+.sidebar .social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+.content {
+    margin-left: 80px; /* Adjust this value based on your sidebar width */
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.content header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content header p {
+    margin: 5px 0;
+}
+
+.video-container {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /*DARKMODE SWITCH*/
 
 /* switch settings 👇 */
@@ -71,7 +146,7 @@
     --switch-width: 48px;
     --switch-height: 20px;
     /* circle */
-    --circle-diameter: 32px;
+    --circle-diameter: 28px;
     --circle-bg: #b80a0a;
     --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
   }
@@ -131,6 +206,58 @@
     transition: all 500ms;
     opacity: 0;
   }
+  
+  /* actions */
+  
+  .ui-switch input:checked+.slider .circle {
+    left: calc(100% - var(--circle-diameter));
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTQuMiAyLjVsLS43IDEuOC0xLjguNyAxLjguNy43IDEuOC42LTEuOEw2LjcgNWwtMS45LS43LS42LTEuOHptMTUgOC4zYTYuNyA2LjcgMCAxMS02LjYtNi42IDUuOCA1LjggMCAwMDYuNiA2LjZ6IiAvPgo8L3N2Zz4=");
+  }
+  
+  .ui-switch input:active+.slider .circle::before {
+    -webkit-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
+    opacity: 1;
+    width: 0;
+    height: 0;
+  }
+
+  /* actions */
+  
+  .theme-switch__checkbox:checked + .theme-switch__container {
+    background-color: var(--container-night-bg);
+  }
+  
+  .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container {
+    left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter));
+  }
+  
+  .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container:hover {
+    left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter) - 0.187em)
+  }
+  
+  .theme-switch__circle-container:hover {
+    left: calc(var(--circle-container-offset) + 0.187em);
+  }
+  
+  .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__moon {
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+  }
+  
+  .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__clouds {
+    bottom: -4.062em;
+  }
+  
+  .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__stars-container {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
   
   /* actions */
   
