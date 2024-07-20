@@ -22,3 +22,24 @@ function calculateResult() {
     }
 }
 
+
+/*===== SCROLL REVEAL ANIMATION =====*/
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded and parsed');
+
+    // Check if ScrollReveal is loaded
+    if (typeof ScrollReveal !== 'undefined') {
+        console.log('ScrollReveal is loaded');
+
+        // Initialize ScrollReveal and reveal elements within the .section class
+        ScrollReveal().reveal('.section .content', {
+            duration: 1000, // Animation duration in milliseconds
+            origin: 'bottom', // Animation starting point
+            distance: '20px', // Distance to travel
+            easing: 'ease-in-out', // Easing function
+            reset: true // Whether to reset the animation on scroll back up
+        });
+    } else {
+        console.error('ScrollReveal is not loaded');
+    }
+});
