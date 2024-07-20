@@ -61,6 +61,13 @@
     }
 }
 
+/* Scroll reveal animation */
+.section {
+    opacity: 1; /* Initial state for the reveal effect */
+    transform: translateY(20px); /* Initial position */
+    scroll-behavior: smooth;
+}  
+    
 /*Workout video HOME page*/
 
 .video-container {
@@ -77,6 +84,199 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/*Cardio Video*/
+
+.cardio-video {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 30.25%; /* 16:9 aspect ratio */
+}
+
+.cardio-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*TIP*/
+
+.item-hints {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 950px;
+  }
+  .item-hints .hint {
+    margin: 55px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item-hints .hint-dot {
+    z-index: 3;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-transform: translate(-0%, -0%) scale(0.95);
+    transform: translate(-0%, -0%) scale(0.95);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+  }
+  .item-hints .hint-radius {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  .item-hints .hint[data-position="1"] .hint-content {
+    top: 85px;
+    left: 50%;
+    margin-left: 56px;
+  }
+  .item-hints .hint-content {
+    width: 400px;
+    position: absolute;
+    z-index: 5;
+    padding: 35px 0;
+    opacity: 0;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    color: #000000;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .item-hints .hint:hover .hint-content {
+    position: absolute;
+    z-index: 5;
+    padding: 35px 0;
+    opacity: 1;
+    -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    color: #000000;
+    visibility: visible;
+    pointer-events: none;
+  }
+  .item-hints .hint-content::before {
+    width: 0px;
+    bottom: 29px;
+    left: 0;
+    content: "";
+    background-color: #000000;
+    height: 1px;
+    position: absolute;
+    transition: width 0.4s;
+  }
+  .item-hints .hint:hover .hint-content::before {
+    width: 180px;
+    transition: width 0.4s;
+  }
+  .item-hints .hint-content::after {
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+    bottom: 29px;
+    left: 0;
+    width: 80px;
+    content: "";
+    background-color: #000000;
+    height: 1px;
+    position: absolute;
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  .item-hints .hint:hover .hint-content::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  .item-hints .hint[data-position="4"] .hint-content {
+    bottom: 85px;
+    left: 50%;
+    margin-left: 56px;
+  }
+  
+
+/*CHOOSE YOUR WORKOUT*/
+
+
+.centered-menu {
+    text-align: center;
+}
+
+.centered-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.centered-menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.centered-menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    background: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    width: 120px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+    position: relative;
+    overflow: hidden;
+    transition: color 0.5s;
+}
+
+.centered-menu a span {
+    display: inline-block;
+    transform: skew(21deg);
+}
+
+.centered-menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: #b80a0a;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.centered-menu a:hover {
+    color: #fff;
+}
+
+.centered-menu a:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
 }
 
 /*DARKMODE SWITCH*/
