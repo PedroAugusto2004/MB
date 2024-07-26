@@ -81,10 +81,20 @@
 		</div>
 	  </label>
 
+    <!--GO TO THE TOP-->
+            
+	<btn id="scrollToTopBtn" title="Go to the top">
+
+		<svg height="1.2em" class="arrow" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></svg>
+
+	</btn>
+
 
 		<article class="content px-3 py-5 p-md-5">
 			<div class="container">
-
+				<div class="section">
+				<div class="content">
+		
 				<p class="mt-3 lead"> <h1>Why a good Nutrition is so important?</h1>
 
 					Good nutrition is crucial because it provides your body with the 
@@ -105,6 +115,9 @@
 					</div>
 						
 					<figcaption class="mt-2 text-center image-caption">Video Credit: <a href="https://www.pexels.com/@abdullah-hafeez-3197669/" target="_blank">Designed by Abdullah Hafeez</a></figcaption>
+
+					</div>
+				</div>
 
 					<h3 class="mt-5 mb-3">Fist of all, lets talk about macronutrients</h3>
 					
@@ -219,50 +232,59 @@
 						Overall, a meal planner streamlines meal preparation and consumption, leading to a more organized, healthy, and economical lifestyle. 
 					</p>
 		
-					<h5 class="my-3">Here's a interactive Meal Planner:</h5>
+                   <!------------ GOALS ------------>
 
-                     <!------------GOALS FORM------------>
+					<h5 class="my-3">Share your goal with us:</h5>
 
-					<form class="form" id="goalsForm">
-						<label for="goals">What's your fitness goal:</label>
-						<textarea id="goals" name="goals" rows="4"></textarea>
-						<br>
-						<button type="submit">Save</button>
-					</form>
-				
-					<script>
-						// Get the form and textarea elements
-						const form = document.getElementById('goalsForm');
-						const textarea = document.getElementById('goals');
-				
-						// Add an event listener to the form
-						form.addEventListener('submit', function(event) {
-							// Prevent the default form submission
-							event.preventDefault();
-							// Show the message
-							alert('Thanks for sharing your goals :)');
-							// Clear the textarea
-							textarea.value = '';
-						});
-					</script>					
+                    <p>By sharing your goals you enable us to help you how to get there throw your journey!!</p>
+
+					 <div class="form-container">
+							
+							<form action="https://api.web3forms.com/submit" method="POST" class="form" id="contactForm">
+								<input type="hidden" name="access_key" value="26bf9e79-cc2f-4094-894a-7719cdaa17cb">
+
+								<div class="form-group">
+									<label for="name">Your Name</label>
+									<input required="" name="name" id="name" type="text">
+								</div>
+								
+								<div class="form-group">
+								<label for="email">Your Email</label>
+								<input required="" name="email" id="email" type="text">
+							</div>
+							
+							<div class="form-group">
+								<label for="textarea">Share your goals!</label>
+								<textarea required="" cols="50" rows="10" id="textarea" name="textarea"></textarea>
+							</div>
+							<button type="submit" class="form-submit-btn">Submit</button>
+						</form>
+					  
+					</div>
+
 						<hr>
 
 				<!------------MEAL PLANNER-------------->
+				<h5 class="my-3">Calcule your Nutrition:</h5>
 
 				<form id="mealForm">
-					<label for="foodItem1">Food Item 1:</label>
-					<input type="text" id="foodItem1" class="foodInput" placeholder="Enter food name">
-					<input type="number" id="portion1" class="portionInput" placeholder="Portion size (grams)">
-					<br>
-		
-					<label for="foodItem2">Food Item 2:</label>
-					<input type="text" id="foodItem2" class="foodInput" placeholder="Enter food name">
-					<input type="number" id="portion2" class="portionInput" placeholder="Portion size (grams)">
-					<br>
-		
+					<div class="food-item">
+						<label for="foodItem1">Food Item 1:</label>
+						<input type="text" id="foodItem1" name="foodItem1" class="foodInput" placeholder="Enter food name">
+						<input type="number" id="portion1" name="portion1" class="portionInput" placeholder="Portion size (grams)">
+						<button type="button" id="addFoodItem" class="icon-btn add-btn"> <div class="add-icon"></div>
+                    <div class="btn-txt">Add Food Item</div></button>
+					</div>
+					<div id="additionalFoodItems"></div>
 					<button type="submit">Calculate Nutrition</button>
-				</form>
-		
+				</form>				
+                <!-- Loading Animation -->
+									
+				<div id="loadingSpinner" class="spinner-overlay">
+					<div class="spinner"></div>
+				</div>
+				
+
 				<div id="nutritionLabel">
 					<h2>Nutrition Facts</h2>
 					<div class="line"></div>
@@ -282,19 +304,43 @@
 				</div>
 			</div>
 		
-			<script src="js/meal.js	"></script>
+			<div class="button-container">
+				<button class="brutalist-button openai button-1">
+				  <div class="openai-logo">
+					<svg
+					  class="openai-icon"
+					  viewBox="0 0 24 24"
+					  xmlns="http://www.w3.org/2000/svg"
+					>
+					  <path
+						d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.8956zm16.0993 3.8558L12.5907 8.3829 14.6108 7.2144a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.3927-.6813zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"
+						fill="#10A37F"
+					  ></path>
+					</svg>
+				  </div>
+				  <div class="button-text">
+					<span>Powered By</span>
+					<span>GPT-4o</span>
+				  </div>
+				</button>
+			  </div>
+			  
 
 
+	    </article>
 
-		<footer class="footer text-center py-2 theme-bg-dark">
-     
-			<p>&copy;PedroAugusto</p>
 
-		</footer>
-
+			<footer class="footer text-center py-2 theme-bg-dark">
+		   
+				<p>&copy;PedroAugusto</p>
+			   
+			</footer>
+	
 	</div>
 	<!--//main-wrapper-->
 
+	<!-- Including ScrollReveal.js from CDN -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
 	<!-- Bootstrap Javascript -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -308,6 +354,7 @@
 	</script>
 	<script src="js/main.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/meal.js	"></script>
 </body>
 
 </html>
