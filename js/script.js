@@ -43,3 +43,14 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('ScrollReveal is not loaded');
     }
 });
+
+/*===== SCROLL TO THE TOP BUTTON =====*/
+
+// Get the button
+let mybutton = document.getElementById("scrollToTopBtn");
+
+// When the user clicks on the button, scroll to the top of the document
+mybutton.onclick = function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
