@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="images/MBlogo.png">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<!--BACKGROUND-->
+<video class="video-bg" autoplay muted loop>
+    <source src="videos/background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<div class="login-box" id="login-box">
+    
+    <!-- Sign In Form -->
+    <div class="form-container" id="sign-in-form">
+        <p>Login</p>
+        <form>
+            <div class="user-box">
+                <input type="text" id="signin-email"  required autocomplete="email">
+                <label for="signin-email">Email</label>
+            </div>
+            <div class="user-box">
+                <input type="password" id="signin-password"  required autocomplete="email">
+                <label for="signin-password">Password</label>
+            </div>
+            <a href="#" onclick="signIn()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Sign In
+            </a>
+        </form>
+        <p><a href="#" onclick="showForgotPassword()" class="a2">Forgot your password?</a></p>
+        <p>Don't have an account? <a href="#" onclick="showSignUp()" class="a2">Sign up!</a></p>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div class="form-container" id="sign-up-form" style="display:none;">
+        <p>Sign Up</p>
+        <form>
+            <div class="user-box">
+                <input type="text" id="signup-name"  required autocomplete="email">
+                <label for="signup-name">Name</label>
+            </div>
+            <div class="user-box">
+                <input type="text" id="signup-email"  required autocomplete="email">
+                <label for="signup-email">Email</label>
+            </div>
+            <div class="user-box">
+                <input type="password" id="signup-password"  required autocomplete="email">
+                <label for="signup-password">Password</label>
+            </div>
+            <div class="user-box">
+                <input type="password" id="signup-confirm-password"  required autocomplete="email">
+                <label for="signup-confirm-password">Confirm Password</label>
+            </div>
+            <div class="user-box">
+                Date of Birth:
+                <input type="date" id="signup-dob" name="dob"  required autocomplete="email">
+            </div>
+            <div class="user-box">
+                <input type="text" id="signup-phone" placeholder="Optional">
+                <label for="signup-phone">Phone Number</label>
+            </div>
+            <div class="user-box">
+                <select id="signup-country" name="country"  required autocomplete="email">
+                    <option value="" disabled selected>Choose your country</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <!-- Add more countries as needed -->
+                </select>
+                <label>Choose your country</label>
+            </div>
+            <div class="gender-container">
+                <label for="male">Male:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="female">Female:</label>
+                <input type="radio" id="female" name="gender" value="female">
+            </div>
+            <div class="terms-container">
+                <input type="checkbox" id="terms" required>
+                <label for="terms"><a href="terms.htm" class="a2">I agree to the terms and conditions</a></label>
+            </div>
+            <a href="#" onclick="signUp()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Sign Up
+            </a>
+        </form>
+        <p>Already have an account? <a href="#" onclick="showSignIn()" class="a2">Sign in</a></p>
+    </div>
+
+    <!-- Forgot Password Form -->
+    <div class="form-container" id="forgot-password-form" style="display:none;">
+        <p>Forgot Password</p>
+        <form>
+            <div class="user-box">
+                <input type="text" id="forgot-email" required>
+                <label for="forgot-email">Enter your email</label>
+            </div>
+            <a href="#" onclick="forgotPassword()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </a>
+        </form>
+        <p>Remembered your password? <a href="#" onclick="showSignIn()" class="a2">Sign in</a></p>
+    </div>
+
+<!--HOME BUTTON-->
+
+<a href="index.htm" class="button">Return</a>
+
+
+    <!-- Logged In -->
+    <div class="form-container" id="logged-in" style="display:none;">
+        <p>Welcome, <span id="username-display"></span>!</p>
+        <a href="#" onclick="logout()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Logout
+        </a>
+    </div>
+</div>
+
+<figcaption class="image-caption">
+    Video Credit: <a href="https://www.pexels.com/pt-br/@pressmaster/" target="_blank">Designed by Pressmaster</a>
+</figcaption>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>
+
+
