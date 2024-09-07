@@ -1,5 +1,4 @@
 /*--------------------LOGIN-------------------*/
-/* From Uiverse.io by glisovic01 */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -21,7 +20,6 @@ body {
     z-index: -1;
 }
 
-/* From Uiverse.io by glisovic01 */
 .login-box {
     position: absolute;
     top: 50%;
@@ -281,7 +279,107 @@ body {
     background-color: #0056b3;
 }
 
+/*--------------------GENDER CONTAINER-------------------*/
 
+.radio-container {
+    margin: 0 auto;
+    max-width: 300px;
+    color: white;
+  }
+  
+  .radio-wrapper {
+    margin-bottom: 20px;
+  }
+  
+  .radio-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .radio-button:hover {
+    transform: translateY(-2px);
+  }
+  
+  .radio-button input[type="radio"] {
+    display: none;
+  }
+  
+  .radio-checkmark {
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+  }
+  
+  .radio-checkmark:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .radio-button input[type="radio"]:checked ~ .radio-checkmark:before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .radio-label {
+    font-size: 16px;
+    font-weight: 600;
+  }  
+
+/*--------------------CHECKBOX-------------------*/
+
+.container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .container input {
+    display: none;
+  }
+  
+  .container svg {
+    overflow: visible;
+    margin-right: 10px;
+  }
+  
+  .path {
+    fill: none;
+    stroke: white;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+    stroke-dasharray: 241 9999999;
+    stroke-dashoffset: 0;
+  }
+  
+  .container input:checked ~ svg .path {
+    stroke-dasharray: 70.5096664428711 9999999;
+    stroke-dashoffset: -262.2723388671875;
+  }
+  
+  .a2 {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .a2:hover {
+    text-decoration: underline;
+  }
+  
 /*--------------------BACKGROUND-------------------*/
 
 body, html {
