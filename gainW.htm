@@ -12,8 +12,11 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #cccaca;
+            background-color: #6d6d6d;
             color: #333;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
         header {
@@ -23,7 +26,7 @@
 
         h1 {
             font-size: 2.5em;
-            color: #444;
+            color: #ffffff;
         }
 
         article {
@@ -42,6 +45,17 @@
 
         p {
             margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: disc; 
+            padding-left: 20px; 
+            text-align: left; 
+            margin: 0; 
+        }
+        
+        ul li {
+            margin-bottom: 10px; 
         }
 
         a.button {
@@ -67,7 +81,19 @@
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 20px 0;
+            margin: 20px auto; /* Centers the image horizontally */
+            border-radius: 15px; /* Adjust the value for more or less rounded corners */
+        }
+
+        /*FIG CAPTION*/
+        .image-caption {
+            color: #8f8f8f;
+            font-size: 0.875rem
+        }
+
+        .image-caption a {
+            color: #8f8f8f;
+            text-decoration: underline
         }
 
         .warning {
@@ -85,7 +111,7 @@
         footer {
             text-align: center;
             margin-top: 20px;
-            color: #777;
+            color: #ffffff;
         }
 
     </style>
@@ -105,7 +131,9 @@
         balanced diet, proper exercise, and adequate rest.
     </p>
 
-    <img src="muscle-building.jpg" alt="Muscle Building">
+    <img src="images/gain-muscles.jpg" alt="Muscle Building">
+
+    <figcaption class="mt-2 text-center image-caption">Image Credit: <a href="https://br.freepik.com/autor/serhiibobyk" target="_blank">Designed by serhii_bobyk</a></figcaption>
 
     <h2>Diet for Gaining Weight</h2>
     <p>

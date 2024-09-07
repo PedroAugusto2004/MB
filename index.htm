@@ -21,17 +21,6 @@
 
 <body>
     
-  <!--TERMS AND CONDITIONS-->
-  <div id="terms-modal" class="modal">
-    <div class="modal-content">
-      <h2 class="heading">Terms and Conditions</h2>
-      <p>Please read and agree to the terms and conditions to access the website.</p>
-      <textarea readonly>[Your terms and conditions go here...]</textarea>
-      <br>
-      <btn1 id="agree-btn">I Agree</btn1>
-    </div>
-  </div>
-  <div id="content" class="hidden">
 
   <header class="header text-center">	    
     <a class="site-title pt-lg-4 mb-0" href="index.htm">Muscles & Balance</a>
@@ -63,11 +52,11 @@
         </ul>
         <hr>
         <ul class="social-list list-inline py-3 mx-auto">
-          <li class="list-inline-item"><a href="#"><i class="fab fa-youtube fa-fw"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="fab fa-tiktok"></i></a></li>
+          <li class="list-inline-item"><a href="http://www.youtube.com/@MusclesBalance"><i class="fab fa-youtube fa-fw"></i></a></li>
+					<li class="list-inline-item"><a href="https://pedroaugusto2004.github.io/PersonalPortfolio/"><i class="fab fa-solid fa-globe fa-fw"></i></a></li>
+          <li class="list-inline-item"><a href="https://github.com/PedroAugusto2004"><i class="fab fa-github-alt fa-fw"></i></a></li>
+          <li class="list-inline-item"><a href="https://www.instagram.com/pedro_augusto.__/"><i class="fab fa-instagram fa-fw"></i></a></li>
+          <li class="list-inline-item"><a href="https://www.tiktok.com/@musclesandbalance?_t=8pG6mxXu5rh&_r=1"><i class="fab fa-tiktok"></i></a></li>
         </ul>
 
       </div>
@@ -97,6 +86,10 @@
           Join us to enhance your well-being, achieve your health goals, and work together towards a healthier, happier you!				
         </p>
 
+        <div class="custom-text">
+          Muscles & Balance is packed with features designed to help you reach your health and fitness goals. You can take advantage of tools like a calorie calculator and a nutrition calculator to tailor your diet to your specific needs. The supplement quiz helps you find the best products to support your journey, and our workout recommendations guide you toward the most effective exercises for your goals. Plus, you'll have access to a wealth of articles on nutrition, workouts, supplements, and much more. All of these resources are available to you completely free of charge, so feel free to dive in and start exploring!       </div>
+      
+
         <h6>The Muscles & Balance Team!</h6>
 
         <div class="slideshow-container" id="slideshow">
@@ -110,12 +103,13 @@
 <p></p>
 <p></p>
 <p></p>
-      <div class="subscribe">
-        <p>SUBSCRIBE</p>
-        <input placeholder="Your e-mail" class="subscribe-input" name="email" type="email">
-        <br>
-        <div class="submit-btn">SUBMIT</div>
-      </div>
+
+<div class="subscribe">
+  <p>SUBSCRIBE</p>
+  <input placeholder="Your e-mail" class="subscribe-input" name="email" type="email" id="emailInput">
+  <br>
+  <div class="submit-btn" id="submitBtn">SUBMIT</div>
+</div>
     
           <!--CARD-->
           <div class="row row-cols-1 mt-4 row-cols-md-2">
@@ -136,9 +130,10 @@
                   </p>
                 </div>
               </div>
-            </div>	
+            </div>
           </div>
         </div>
+    
         <!--MB CARD-->
 
         <div class="card">
@@ -184,7 +179,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
-	<script src="js/script.js"></script>
     <script>
       // Check if user information is stored in local storage
       const user = JSON.parse(localStorage.getItem('user'));
