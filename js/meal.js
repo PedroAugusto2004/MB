@@ -1,4 +1,4 @@
-// NUTRITION CALCULATION
+// NUTRITION CALCULATOR
 
 document.getElementById('addFoodItem').addEventListener('click', function() {
     const foodItemCount = document.querySelectorAll('.food-item').length + 1;
@@ -141,3 +141,20 @@ ocument.getElementById('contactForm').addEventListener('submit', function(e) {
         alert('Failed to submit the form.');
     });
 });
+
+// RECIPES
+
+function filterRecipes() {
+    const searchTerm = document.getElementById('search').value.toLowerCase();
+    const recipes = document.getElementsByClassName('recipe-card');
+
+    for (let i = 0; i < recipes.length; i++) {
+        const recipeTitle = recipes[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
+
+        if (recipeTitle.includes(searchTerm)) {
+            recipes[i].style.display = '';
+        } else {
+            recipes[i].style.display = 'none';
+        }
+    }
+}

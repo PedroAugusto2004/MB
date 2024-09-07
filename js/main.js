@@ -56,40 +56,31 @@ let slideIndex = 0;
     // Automatic slide (optional)
     setInterval(nextSlide, 5000); // Change image every 5 seconds
 
-	
-//TERMS AND CONDITIONS
+// SUBSCRIBE
 
-document.addEventListener('DOMContentLoaded', function () {
-	const modal = document.getElementById('terms-modal');
-	const agreeBtn = document.getElementById('agree-btn');
-	const content = document.getElementById('content');
+document.getElementById('submitBtn').addEventListener('click', function() {
+    // Get the email input field
+    const emailInput = document.getElementById('emailInput').value;
   
-	// Check if the user has already agreed to the terms
-	if (!localStorage.getItem('termsAgreed')) {
-	  modal.style.display = 'block';
-	} else {
-	  content.classList.remove('hidden');
-	}
+    // Check if the email input is not empty
+    if (emailInput.trim() !== '') {
+      // Change button text to 'SUBMITTED'
+      this.textContent = 'SUBMITTED';
+      
+      // Clear the email input field
+      document.getElementById('emailInput').value = '';
   
-	// When the user clicks the "I Agree" button
-	agreeBtn.addEventListener('click', function () {
-	  localStorage.setItem('termsAgreed', 'true');
-	  modal.style.display = 'none';
-	  content.classList.remove('hidden');
-	});
+      // Disable the button to prevent further clicks
+      this.style.pointerEvents = 'none';
+      this.style.backgroundColor = '#333'; // Change button color after submission
+  
+      // Redirect to the login page after submission (example: "/login")
+      setTimeout(function() {
+        window.location.href = 'login.htm'; // Replace with your actual login page URL
+      }, 1500); // Adds a slight delay of 1.5 seconds before redirecting
+    } else {
+      // If the email input is empty, alert the user
+      alert('Please fill in your email before submitting.');
+    }
   });
-	
-
-//DARKMODE SWITCH
-
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-const elementsToToggle = document.querySelectorAll('section, p, li, h1, h2, h3, h4, h5, h6, label, input, form, span');
-
-themeToggle.addEventListener('change', () => {
-    body.classList.toggle('dark-mode');
-
-    elementsToToggle.forEach(element => {
-        element.classList.toggle('dark-mode');
-    });
-});
+  

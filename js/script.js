@@ -28,6 +28,49 @@ function calculateCalories() {
 }
 
 
+//----------WORKOUT PLAN----------//
+
+function getWorkoutPlan() {
+    const fitnessLevel = document.getElementById('fitness-level').value;
+    const goal = document.getElementById('goal').value;
+    const preference = document.getElementById('preference').value;
+    let workoutPlan = '';
+
+    if (fitnessLevel === 'beginner') {
+        if (goal === 'weight-loss') {
+            workoutPlan = preference === 'cardio' ? 'Beginner Cardio Plan' : 'Beginner Full Body Plan';
+        } else if (goal === 'muscle-gain') {
+            workoutPlan = 'Beginner Strength Training Plan';
+        } else if (goal === 'endurance') {
+            workoutPlan = 'Beginner Endurance Plan';
+        } else {
+            workoutPlan = 'Beginner Yoga & Flexibility Plan';
+        }
+    } else if (fitnessLevel === 'intermediate') {
+        if (goal === 'weight-loss') {
+            workoutPlan = preference === 'cardio' ? 'Intermediate Cardio Plan' : 'Intermediate Full Body Plan';
+        } else if (goal === 'muscle-gain') {
+            workoutPlan = 'Intermediate Strength Training Plan';
+        } else if (goal === 'endurance') {
+            workoutPlan = 'Intermediate Endurance Plan';
+        } else {
+            workoutPlan = 'Intermediate Yoga & Flexibility Plan';
+        }
+    } else {
+        if (goal === 'weight-loss') {
+            workoutPlan = preference === 'cardio' ? 'Advanced Cardio Plan' : 'Advanced Full Body Plan';
+        } else if (goal === 'muscle-gain') {
+            workoutPlan = 'Advanced Strength Training Plan';
+        } else if (goal === 'endurance') {
+            workoutPlan = 'Advanced Endurance Plan';
+        } else {
+            workoutPlan = 'Advanced Yoga & Flexibility Plan';
+        }
+    }
+
+    document.getElementById('result').innerText = `Your Recommended Workout Plan: ${workoutPlan}`;
+}
+
 /*===== SCROLL REVEAL ANIMATION =====*/
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM fully loaded and parsed');
