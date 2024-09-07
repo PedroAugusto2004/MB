@@ -19,7 +19,7 @@
     
     <!-- Sign In Form -->
     <div class="form-container" id="sign-in-form">
-        <p>Login</p>
+        <p>Login to your account</p>
         <form>
             <div class="user-box">
                 <input type="text" id="signin-email"  required autocomplete="email">
@@ -74,21 +74,52 @@
                     <option value="" disabled selected>Choose your country</option>
                     <option value="usa">United States</option>
                     <option value="canada">Canada</option>
+                    <option value="china">China</option>
+                    <option value="brazil">Brazil</option>
+                    <option value="france">France</option>
+                    <option value="russia">Russia</option>
+
                     <!-- Add more countries as needed -->
                 </select>
                 <label>Choose your country</label>
             </div>
-            <div class="gender-container">
-                <label for="male">Male:</label>
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="female">Female:</label>
-                <input type="radio" id="female" name="gender" value="female">
+            
+            <div class="radio-container">
+                <div class="radio-wrapper">
+                  <label class="radio-button">
+                    <input id="male" name="gender" type="radio" value="male">
+                    <span class="radio-checkmark"></span>
+                    <span class="radio-label">Male</span>
+                  </label>
+                </div>
+              
+                <div class="radio-wrapper">
+                  <label class="radio-button">
+                    <input id="female" name="gender" type="radio" value="female">
+                    <span class="radio-checkmark"></span>
+                    <span class="radio-label">Female</span>
+                  </label>
+                </div>
+              
+                <div class="radio-wrapper">
+                  <label class="radio-button">
+                    <input id="other" name="gender" type="radio" value="other">
+                    <span class="radio-checkmark"></span>
+                    <span class="radio-label">Other</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="terms-container">
+                <label class="container">
+                    <input type="checkbox" id="terms" required>
+                    <svg viewBox="0 0 64 64" height="1.3em" width="1.3em">
+                        <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
+                    </svg>
+                    <a href="terms.htm" class="a2">I agree to the terms and conditions</a>
+                </label>
             </div>
-            <div class="terms-container">
-                <input type="checkbox" id="terms" required>
-                <label for="terms"><a href="terms.htm" class="a2">I agree to the terms and conditions</a></label>
-            </div>
-            <a href="#" onclick="signUp()">
+         <a href="#" onclick="signUp()">
                 <span></span>
                 <span></span>
                 <span></span>

@@ -21,19 +21,6 @@
 
 <body>
     
-    <!--TERMS AND CONDITIONS-->
-
-	<div id="terms-modal" class="modal">
-		<div class="modal-content">
-		  <h2 class="heading">Terms and Conditions</h2>
-		  <p>Please read and agree to the terms and conditions to access the website.</p>
-		  <textarea readonly>[Your terms and conditions go here...]</textarea>
-		  <br>
-		  <btn1 id="agree-btn">I Agree</btn1>
-		</div>
-	  </div>
-	  <div id="content" class="hidden">
-
 
     <header class="header text-center">	    
 	    <a class="site-title pt-lg-4 mb-0" href="index.htm">Muscles & Balance</a>
@@ -68,11 +55,11 @@
 				</ul>
 				<hr>
 				<ul class="social-list list-inline py-3 mx-auto">
-					<li class="list-inline-item"><a href="#"><i class="fab fa-youtube fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-tiktok"></i></a></li>
+					<li class="list-inline-item"><a href="http://www.youtube.com/@MusclesBalance"><i class="fab fa-youtube fa-fw"></i></a></li>
+					<li class="list-inline-item"><a href="https://pedroaugusto2004.github.io/PersonalPortfolio/"><i class="fab fa-solid fa-globe fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="https://github.com/PedroAugusto2004"><i class="fab fa-github-alt fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/pedro_augusto.__/"><i class="fab fa-instagram fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.tiktok.com/@musclesandbalance?_t=8pG6mxXu5rh&_r=1"><i class="fab fa-tiktok"></i></a></li>
 				</ul>
 
 			</div>
@@ -85,6 +72,13 @@
 			<a href="login.htm" class="button">Sign In</a>
 		</header>
 		  
+    <!--GO TO THE TOP-->
+            
+	<btn id="scrollToTopBtn" title="Go to the top">
+
+		<svg height="1.2em" class="arrow" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></svg>
+
+	</btn>
 	  
 	    <article class="about-section content px-3 py-5 p-md-5">
 		    <div class="container">			    
@@ -142,6 +136,45 @@
 
 				<figcaption class="mt-2 text-center image-caption">Video Credit: <a href="https://pixabay.com/pt/users/julientromeur-3630051/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=129734" target="_blank">Designed by Julien Tromeur</a></figcaption>
 
+				<!---WORKOUT QUIZ--->
+
+				<h1>Find Your Perfect Workout Plan</h1>
+
+				<div class="quiz-container">
+					<form id="quiz-form">
+						<div class="question">
+							<select id="fitness-level" name="fitness-level">
+								<option value="" disabled selected>What is your fitness level?</option>
+								<option value="beginner">Beginner</option>
+								<option value="intermediate">Intermediate</option>
+								<option value="advanced">Advanced</option>
+							</select>
+						</div>
+						<div class="question">
+							<select id="goal" name="goal">
+								<option value="" disabled selected>What is your fitness goal?</option>
+								<option value="weight-loss">Weight Loss</option>
+								<option value="muscle-gain">Muscle Gain</option>
+								<option value="endurance">Endurance</option>
+								<option value="flexibility">Flexibility</option>
+							</select>
+						</div>
+						<div class="question">
+							<select id="preference" name="preference">
+								<option value="" disabled selected>Wich workouts do you prefer?</option>
+								<option value="strength">Strength Training</option>
+								<option value="cardio">Cardio</option>
+								<option value="yoga">Yoga</option>
+								<option value="mixed">Mixed Workouts</option>
+							</select>
+						</div>
+						<button-1 type="button" onclick="getWorkoutPlan()">
+							<span></span>
+							Get My Workout Plan
+						</button-1>
+					</form>
+					<div id="result"></div>
+				</div>
 
 				<h3 class="mt-5">Here are the best exercises you should do for each muscle:</h3>
 
@@ -160,13 +193,6 @@
 					</ul>
 				</div>
 
-                <!--GO TO THE TOP-->
-            <btn id="scrollToTopBtn" title="Go to the top">
-
-				<svg height="1.2em" class="arrow" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></svg>
-
-			</btn>
-
                 <!-------CHEST------->
 				<div class="section">
 				<div class="content">
@@ -179,7 +205,7 @@
 				<img class="img-fluid" src="images/anatomy/chest anatomy.jpg" alt="image">
 
 			<!--TIP-->
-			<div class="uiverse">
+			<div class="tip">
 				<span class="tooltip">dumbbells improves your strength and is less risky.
 				</span>
 				<span>
@@ -347,7 +373,7 @@
             
 			
 			<!--TIP-->
-				<div class="uiverse">
+				<div class="tip">
 					<span class="tooltip">Squats is the best because work multiple muscles</span>
 					<span>
 						TIP

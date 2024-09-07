@@ -25,20 +25,6 @@
 <body>
  
 
-    <!--TERMS AND CONDITIONS-->
-
-	<div id="terms-modal" class="modal">
-		<div class="modal-content">
-		  <h2 class="heading">Terms and Conditions</h2>
-		  <p>Please read and agree to the terms and conditions to access the website.</p>
-		  <textarea readonly>[Your terms and conditions go here...]</textarea>
-		  <br>
-		  <btn1 id="agree-btn">I Agree</btn1>
-		</div>
-	  </div>
-	  <div id="content" class="hidden">
-
-
 	<header class="header text-center">
 		<a class="site-title pt-lg-4 mb-0" href="index.htm">Muscles & Balance</a>
 
@@ -73,11 +59,11 @@
 				</ul>
 				<hr>
 				<ul class="social-list list-inline py-3 mx-auto">
-					<li class="list-inline-item"><a href="#"><i class="fab fa-youtube fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-tiktok"></i></a></li>
+					<li class="list-inline-item"><a href="http://www.youtube.com/@MusclesBalance"><i class="fab fa-youtube fa-fw"></i></a></li>
+					<li class="list-inline-item"><a href="https://pedroaugusto2004.github.io/PersonalPortfolio/"><i class="fab fa-solid fa-globe fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="https://github.com/PedroAugusto2004"><i class="fab fa-github-alt fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/pedro_augusto.__/"><i class="fab fa-instagram fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.tiktok.com/@musclesandbalance?_t=8pG6mxXu5rh&_r=1"><i class="fab fa-tiktok"></i></a></li>
 				</ul>
 
 			</div>
@@ -240,7 +226,7 @@
 										<option value="maintain">Maintain weight</option>
 										<option value="gain">Gain weight</option>
 									</select>
-									<button type="button" class="btn" onclick="calculateCalories()">Calculate</button>
+									<button type="button" class="btn2" onclick="calculateCalories()">Calculate</button>
 								</form>
 								<div id="result" class="form_details"></div>
 							</div>
@@ -274,10 +260,101 @@
 					<a href="carnivore.htm">
 						<button>Carnivore Diet</button>
 					</a>
+<P></P>
+<P></P>
+  
+    <!--RECIPES-->
 
+	<h2>Healthy Recipes</h2>
+	<input type="text" id="search" placeholder="Search recipes..." onkeyup="filterRecipes()">
 
+	<main>
+        <section id="recipe-list">
+            <!-- Recipe 1 -->
+            <article class="recipe-card">
+                <h2>Quinoa Salad</h2>
+                <p>Ingredients: Quinoa, cherry tomatoes, cucumber, olive oil, lemon juice, parsley.</p>
+                <p>Instructions: Cook quinoa, mix ingredients, add dressing, and serve chilled.</p>
+                <div class="ratings">
+                    <span>Rating: ★★★★☆</span>
+                    <span>(20 votes)</span>
+                </div>
+                <div class="comments">
+                    <h3>Comments</h3>
+                    <p>User1: Delicious and healthy!</p>
+                    <p>User2: Easy to make!</p>
+                </div>
+            </article>
 
-				<!------------MEAL PLANNER-------------->
+            <!-- Recipe 2 -->
+            <article class="recipe-card">
+                <h2>Grilled Chicken with Avocado Salsa</h2>
+                <p>Ingredients: Chicken breast, avocado, lime, red onion, cilantro, olive oil.</p>
+                <p>Instructions: Grill chicken, prepare salsa with avocado, lime, and onions, and top the chicken with salsa.</p>
+                <div class="ratings">
+                    <span>Rating: ★★★★★</span>
+                    <span>(35 votes)</span>
+                </div>
+                <div class="comments">
+                    <h3>Comments</h3>
+                    <p>User1: My go-to meal for a healthy dinner!</p>
+                    <p>User2: The avocado salsa is amazing!</p>
+                </div>
+            </article>
+
+            <!-- Recipe 3 -->
+            <article class="recipe-card">
+                <h2>Vegan Buddha Bowl</h2>
+                <p>Ingredients: Brown rice, chickpeas, roasted sweet potatoes, avocado, tahini sauce.</p>
+                <p>Instructions: Cook rice, roast sweet potatoes, assemble bowl with ingredients, and drizzle with tahini sauce.</p>
+                <div class="ratings">
+                    <span>Rating: ★★★★☆</span>
+                    <span>(25 votes)</span>
+                </div>
+                <div class="comments">
+                    <h3>Comments</h3>
+                    <p>User1: A balanced and flavorful meal!</p>
+                    <p>User2: I love the combination of ingredients.</p>
+                </div>
+            </article>
+
+            <!-- Recipe 4 -->
+            <article class="recipe-card">
+                <h2>Overnight Oats</h2>
+                <p>Ingredients: Rolled oats, almond milk, chia seeds, honey, berries.</p>
+                <p>Instructions: Mix oats, almond milk, and chia seeds, refrigerate overnight, top with honey and berries.</p>
+                <div class="ratings">
+                    <span>Rating: ★★★★★</span>
+                    <span>(40 votes)</span>
+                </div>
+                <div class="comments">
+                    <h3>Comments</h3>
+                    <p>User1: Perfect for a quick breakfast!</p>
+                    <p>User2: Love the creaminess of the oats.</p>
+                </div>
+            </article>
+
+            <!-- Recipe 5 -->
+            <article class="recipe-card">
+                <h2>Green Smoothie</h2>
+                <p>Ingredients: Spinach, banana, almond milk, flax seeds, honey.</p>
+                <p>Instructions: Blend spinach, banana, almond milk, flax seeds, and honey until smooth.</p>
+                <div class="ratings">
+                    <span>Rating: ★★★★☆</span>
+                    <span>(30 votes)</span>
+                </div>
+                <div class="comments">
+                    <h3>Comments</h3>
+                    <p>User1: A refreshing and nutritious start to the day!</p>
+                    <p>User2: Surprisingly tasty for a green smoothie!</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+	
+				<!------------CALCULATE NUTRIRITION-------------->
 				<h5 class="my-3">Calcule your Nutrition:</h5>
 
 				<form id="mealForm">
@@ -323,10 +400,12 @@
 	
 			<p></p>
 			<p></p>
-			<a href="https://www.nutritionix.com/"  target="_blank" class="powered-image-link">
-				<img src="images/nutritionix_icon.png" alt="Example Logo" class="powered-image">
-			</a>
-				
+			<div class="powered-container">
+				<span class="powered-text">Powered By</span>
+				<a href="https://www.nutritionix.com/" target="_blank" class="powered-image-link">
+				  <img src="images/nutritionix_icon.png" alt="Example Logo" class="powered-image">
+				</a>
+			  </div>				
 <p></p>
 <p></p>
 

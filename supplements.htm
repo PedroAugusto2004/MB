@@ -15,25 +15,12 @@
 	<!-- Bootstrap CSS-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  
 	<!-- Theme CSS -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/supplemments.css">
 
 </head> 
 
 <body>
     
-    <!--TERMS AND CONDITIONS-->
-
-	<div id="terms-modal" class="modal">
-		<div class="modal-content">
-		  <h2 class="heading">Terms and Conditions</h2>
-		  <p>Please read and agree to the terms and conditions to access the website.</p>
-		  <textarea readonly>[Your terms and conditions go here...]</textarea>
-		  <br>
-		  <btn1 id="agree-btn">I Agree</btn1>
-		</div>
-	  </div>
-	  <div id="content" class="hidden">
-
 
     <header class="header text-center">	    
 		<a class="site-title pt-lg-4 mb-0" href="index.htm">Muscles & Balance</a>
@@ -66,13 +53,12 @@
 				</ul>
 				<hr>
 				<ul class="social-list list-inline py-3 mx-auto">
-					<li class="list-inline-item"><a href="#"><i class="fab fa-youtube fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-tiktok"></i></a></li>
+					<li class="list-inline-item"><a href="http://www.youtube.com/@MusclesBalance"><i class="fab fa-youtube fa-fw"></i></a></li>
+					<li class="list-inline-item"><a href="https://pedroaugusto2004.github.io/PersonalPortfolio/"><i class="fab fa-solid fa-globe fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="https://github.com/PedroAugusto2004"><i class="fab fa-github-alt fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/pedro_augusto.__/"><i class="fab fa-instagram fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.tiktok.com/@musclesandbalance?_t=8pG6mxXu5rh&_r=1"><i class="fab fa-tiktok"></i></a></li>
 				</ul>
-
 			</div>
 		</nav>
     </header>
@@ -102,20 +88,45 @@
 				
 					<p>Supplements are products designed to enhance your diet by providing essential nutrients that may not be consumed in sufficient quantities through food alone. These can include vitamins, minerals, amino acids, enzymes, and other substances. Supplements come in various forms such as tablets, capsules, powders, and liquids. They are often used to fill nutritional gaps, support specific health goals like improving immunity, boosting energy levels, or enhancing athletic performance. While supplements can be beneficial, it's important to use them wisely and preferably under the guidance of a healthcare professional, as overuse or misuse can lead to adverse effects.</p></p>
 
-					<div class="slideshow-container" id="slideshow">
-						<div class="slides">
-							<img src="images/supplements/Supplements.jpeg" alt="Image 1">
-							<img src="images/supplements/Supplements2.jpeg" alt="Image 2">
-						</div>
+					<div class="video-container">
+						<video autoplay muted loop id="background-video">
+							<source src="videos/Supplements.mov" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
 					</div>
-							
+								
 
-				</div>
-	</div>
 
-	<h3 class="my-3">Types of Supplements:</h3>
+	<p></p>
 
-	<h5 class="my-3">Vitamins and Minerals:</h5>
+	<h6 class="centered-heading">Discover the best features to choose your supplements and track your intake!</h6>
+
+<ul>
+        <a href="#quiz">
+            <div class="button-container">
+				<button class="cssbuttons-io">
+				  <span>QUIZ</span>
+				</button>
+			</div>	
+        </a>
+</ul>
+<ul>
+	<a href="#tracker">
+		<div class="button-container">
+		<button class="cssbuttons-io">
+			<span>TRACKER</span>
+		  </button>
+		</div>	
+	</a>
+</ul>
+
+	<h3 class="my-3">Types of Supplements</h3>
+
+<p>Explore the most common types of supplements and learn how they can help improve your health.</p>
+
+	<h5 class="my-3">Vitamins</h5>
+
+	<img class="img-fluid" src="images/supplements/vitamins.png" alt="image">
 
 	  <p>Vitamins and minerals are essential nutrients that the body needs to function correctly. Here's an overview of some of the most important ones:</p>
 
@@ -153,11 +164,13 @@
 
 	</ul>
 
-	<h5 class="my-3">Protein Supplements:</h5>
+	<h5 class="my-3">Protein Supplements</h5>
    <p>Proteins are essential nutrients that play a crucial role in building and repairing tissues, producing enzymes and hormones, and supporting overall bodily functions. There are different types of protein sources, each with unique benefits. Here's an overview:</p>
 		
-   <h6>Animal-Based Proteins:</h6>
+   <h6>Animal-Based Proteins</h6>
 	
+   <img class="img-fluid" src="images/supplements/whey.png" alt="image">
+
    <ul class="mb-5">
 		<li class="mb-2">Whey Protein</li>
 
@@ -180,8 +193,10 @@
 
 	</ul>
 
-   <h6>Plant-Based Proteins:</h6>
+   <h6>Plant-Based Proteins</h6>
 	
+   <img class="img-fluid" src="images/supplements/vegan.png" alt="image">
+
    <ul class="mb-5">
 		<li class="mb-2">Soy Protein</li>
 
@@ -238,38 +253,239 @@
 	</ul>
 
 
-	<h5 class="my-3">Herbal Supplements:</h5>
+	<h5 class="my-3">Herbal Supplements</h5>
+
+	<img class="img-fluid" src="images/supplements/herbal.jpg" alt="image">
 
 	<p>Supplementation with herbs like turmeric, ginkgo biloba, and echinacea has become increasingly popular due to their potential health benefits. Here's an overview of how each herb is commonly used in supplementation, the forms available, dosages, and considerations:</p>
 
-	<ul class="mb-5">
-		<li class="mb-2">Function: Proteins are essential for building, repairing, and maintaining tissues and organs. 
-			They also play a role in enzyme and hormone production and support the immune system.</li>
+	<h6>Turmeric</h6>
 
-		<li class="mb-2">Sources: Protein-rich foods include meat, fish, eggs, dairy, legumes, nuts, and seeds.</li>
+	<ul class="mb-5">
+		<li class="mb-2">Forms: Capsules, powders, tinctures, topicals.</li>
+
+		<li class="mb-2">Dosage: Typically 500-2,000 mg/day, often with black pepper extract (piperine) to improve absorption.</li>
 		
-		<li class="mb-2">Importance: Proteins provide the building blocks (amino acids) necessary for muscle growth and repair, making them vital for athletes and those with physically demanding lifestyles.</li>
+		<li class="mb-2">Benefits: Anti-inflammatory, antioxidant, supports heart and brain health.</li>
+		
+		<li class="mb-2">Considerations: Poor absorption without piperine or fat, may interact with blood thinners.</li>
+
 	</ul>
+
+	<h6>Ginkgo Biloba</h6>
+
+	<ul class="mb-5">
+		<li class="mb-2">Forms: Capsules, liquid extracts, teas.</li>
+
+		<li class="mb-2">Dosage: 120-240 mg/day, standardized to 24% flavonoids and 6% terpenoids.</li>
+		
+		<li class="mb-2">Benefits: Supports cognitive function, circulation, and may reduce anxiety.</li>
+		
+		<li class="mb-2">Considerations: Risk of bleeding, especially with anticoagulants; possible side effects include dizziness and headaches.</li>
+
+	</ul>
+
+	<h6>Echinacea</h6>
+
+	<ul class="mb-5">
+		<li class="mb-2">Forms: Capsules, tinctures, teas.</li>
+
+		<li class="mb-2">Dosage: 300-500 mg 2-3 times daily, or 2.5 ml tincture three times a day during illness.</li>
+		
+		<li class="mb-2">Benefits: Boosts immune system, often used to prevent or treat colds.</li>
+		
+		<li class="mb-2">Considerations: Allergic reactions possible, especially in those with allergies to the daisy family; not recommended for long-term use or autoimmune disorders without medical advice.</li>
+
+	</ul>
+
+	<h6>General Tips</h6>
+
+	<ul class="mb-5">
+		<li class="mb-2">Consult a Healthcare Provider: Especially if you have existing conditions or are on other medications.</li>
+
+		<li class="mb-2">Quality Matters: Choose supplements from reputable brands that use standardized extracts to ensure potency and consistency.</li>
+		
+	</ul>
+
 
 	<h5 class="my-3">Probiotics and Prebiotics:</h5>
 
-	<ul class="mb-5">
-		<li class="mb-2">Function: Fats provide a concentrated source of energy and are important for absorbing fat-soluble vitamins (A, D, E, and K). They also play a role in hormone production and maintaining cell membranes.</li>
+	<p>Probiotics are live beneficial bacteria that help maintain gut health by balancing microbiota, supporting digestion, and combating harmful bacteria. Prebiotics are non-digestible fibers that feed these beneficial bacteria, promoting their growth and enhancing gut microbiome diversity. Together, they support digestive health, boost immunity, and improve overall well-being. Probiotics are found in foods like yogurt and sauerkraut, while prebiotics are in garlic, onions, and whole grains.</p>
+	
+	<h5 class="my-3">Omega-3 Fatty Acids</h5>
 
-		<li class="mb-2">Sources: Healthy fats can be found in avocados, nuts, seeds, oils (such as olive oil), and fatty fish.</li>
+	<img class="img-fluid" src="images/supplements/omega-3.jpg" alt="image">
+
+	<p>Omega-3 fatty acids are essential fats that play a crucial role in overall health. The three main types are ALA (alpha-linolenic acid), EPA (eicosapentaenoic acid), and DHA (docosahexaenoic acid). Here’s how they benefit the body:</p>
+
+
+	<h6>Heart Health</h6>
+
+	<ul class="mb-5">
+		<li class="mb-2">Reduced Risk of Heart Disease</li>
+
+		<li class="mb-2">Anti-Inflammatory Effects</li>
 		
-		<li class="mb-2">Importance: Fats support brain function, protect organs, and provide insulation and padding. They also contribute to satiety, helping you feel full and satisfied after eating.</li>
+		<li class="mb-2">Improved Heart Rhythm</li>
 	</ul>
 
-	<h5 class="my-3">Omega-3 Fatty Acids:</h5>
+	<h6>Brain Health</h6>
 
 	<ul class="mb-5">
-		<li class="mb-2">Function: Fats provide a concentrated source of energy and are important for absorbing fat-soluble vitamins (A, D, E, and K). They also play a role in hormone production and maintaining cell membranes.</li>
+		<li class="mb-2">Cognitive Function</li>
 
-		<li class="mb-2">Sources: Healthy fats can be found in avocados, nuts, seeds, oils (such as olive oil), and fatty fish.</li>
+		<li class="mb-2">Mental Health</li>
 		
-		<li class="mb-2">Importance: Fats support brain function, protect organs, and provide insulation and padding. They also contribute to satiety, helping you feel full and satisfied after eating.</li>
 	</ul>
+
+	<h6>Eye Health</h6>
+
+	<ul class="mb-5">
+		<li class="mb-2">Retinal Health</li>
+
+		<li class="mb-2">Visual Development in Infants</li>
+		
+	</ul>
+	
+	<h6>Joint and Bone Health</h6>
+
+	<ul class="mb-5">
+		<li class="mb-2">Reduced Inflammation</li>
+
+		<li class="mb-2">Bone Strength</li>
+		
+	</ul>
+
+	<h6>Skin Health</h6>
+
+	<ul class="mb-5">
+		<li class="mb-2">Moisture and Elasticity</li>
+
+		<li class="mb-2">Anti-Aging</li>
+		
+	</ul>
+
+	<h6>Immune System Support</h6>
+
+	<ul class="mb-5">
+
+		<li class="mb-2">Inflammation Regulation</li>
+		
+	</ul>
+
+	<h6>Sources</h6>
+
+	<ul class="mb-5">
+
+		<li class="mb-2">Fish Oil</li>
+		<li class="mb-2">Fatty Fish</li>
+		<li class="mb-2">Flaxseeds and Chia Seeds</li>
+		<li class="mb-2">Walnuts</li>
+		<li class="mb-2">Algal Oil</li>
+		<li class="mb-2">Omega-3 Fortified Foods</li>
+		
+	</ul>
+
+	<h6>Considerations</h6>
+
+	<ul class="mb-5">
+
+		<li class="mb-2">Balanced Intake: While omega-3s are beneficial, it’s important to maintain a balance with omega-6 fatty acids, which are also essential but can promote inflammation if consumed in excess relative to omega-3s.</li>
+		<li class="mb-2">Consultation for Supplementation: If considering omega-3 supplements, especially fish oil, it’s advisable to consult with a healthcare provider, particularly if you have any underlying health conditions or are on medications.</li>
+		
+	</ul>
+
+	<!-------------SUPPLEMMENT QUIZ--------------->
+	<div class="section">
+		<div class="content">
+		<section class="quiz bg-grid" id="quiz">
+
+	<h2>Supplement Quiz</h2>	
+
+	<div class="login-box">
+		<form id="supplementQuiz">
+			<div class="user-box">
+				<select id="goal" name="goal" class="input">
+					<option value="" disabled selected>What is your primary fitness goal?</option>
+					<option value="muscleGain">Muscle Gain</option>
+					<option value="weightLoss">Weight Loss</option>
+					<option value="energyBoost">Energy Boost</option>
+				</select>
+			</div>
+	
+			<div class="user-box">
+				<select id="activityLevel" name="activityLevel" class="input">
+					<option value="" disabled selected>What is your activity level?</option>
+					<option value="low">Low</option>
+					<option value="moderate">Moderate</option>
+					<option value="high">High</option>
+				</select>
+			</div>
+	
+			<div class="user-box">
+				<select id="dietType" name="dietType" class="input">
+					<option value="" disabled selected>What is your diet type?</option>
+					<option value="omnivore">Omnivore</option>
+					<option value="vegetarian">Vegetarian</option>
+					<option value="vegan">Vegan</option>
+				</select>
+			</div>
+	
+			<a href="javascript:void(0);" onclick="calculateRecommendation()">
+				Get Recommendation
+				<span></span><span></span><span></span><span></span>
+			</a>
+		</form>
+	
+		<div id="result" class="result">
+			<p-1 id="recommendationText"></p-1>
+		</div>
+	</div>
+					</section>
+    </div>
+</div>
+
+<!-------------SUPPLEMMENT TRACKER--------------->
+
+<div class="section">
+	<div class="content">
+	<section class="tracker bg-grid" id="tracker">
+
+<h2>Supplement Tracker</h2>
+
+<div class="login-box tracker-container">
+
+	<!-- Form to log supplements -->
+	<form id="supplement-form">
+		<div class="user-box">
+			<input type="text" id="supplement-name" required>
+			<label for="supplement-name">Supplement Name:</label>
+		</div>
+		<div class="user-box">
+			<input type="number" id="dosage" required>
+			<label for="dosage">Dosage (mg):</label>
+		</div>
+		<div class="user-box">
+			<input type="date" id="date" required>
+			<label for="date">Date:</label>
+		</div>
+		<div class="user-box">
+			<input type="time" id="time" required>
+			<label for="time">Time:</label>
+		</div>
+		<a href="javascript:void(0)" id="log-supplement">Log Supplement
+		<span></span><span></span><span></span><span></span>
+	</a>
+	</form>
+
+	<!-- Supplement intake history -->
+	<div class="history-list" id="history-list">
+		<!-- Intake log items will appear here -->
+	</div>
+</div>
+        </section>
+    </div>
+</div>
 
 			<h3 class="my-3">My supplemments recommendations:</h3>
 
@@ -319,7 +535,8 @@
 		<p>&copy; 2024 Muscles & Balance. All rights reserved.</p>
 	</footer>
 
-    </div><!--//main-wrapper-->
+    </div>
+	<!--//main-wrapper-->
     
         <!-- SCROLL REVAEL -->
  
@@ -334,6 +551,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
+    <script src="js/supplements.js"></script>
 
 </body>
 </html> 

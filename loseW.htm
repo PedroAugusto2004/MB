@@ -10,10 +10,13 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
             padding: 0;
-            background-color: #cccaca;
+            background-color: #6d6d6d;
             color: #333;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
         header {
@@ -23,7 +26,7 @@
 
         h1 {
             font-size: 2.5em;
-            color: #000000;
+            color: #ffffff;
         }
 
         article {
@@ -46,18 +49,20 @@
         }
 
         ul {
-            list-style-type: disc;
-            margin-left: 20px;
+            list-style-type: disc; 
+            padding-left: 20px; 
+            text-align: left; 
+            margin: 0; 
         }
-
-        li {
-            margin-bottom: 10px;
+        
+        ul li {
+            margin-bottom: 10px; 
         }
 
         footer {
             text-align: center;
             margin-top: 20px;
-            color: #777;
+            color: #fcfcfc;
         }
 
         a.button {
@@ -83,7 +88,19 @@
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 20px 0;
+            margin: 20px auto; /* Centers the image horizontally */
+            border-radius: 15px; /* Adjust the value for more or less rounded corners */
+        }
+        
+        /*FIG CAPTION*/
+        .image-caption {
+            color: #8f8f8f;
+            font-size: 0.875rem
+        }
+
+        .image-caption a {
+            color: #8f8f8f;
+            text-decoration: underline
         }
 
         .warning {
@@ -113,7 +130,10 @@
         Losing weight while building muscle mass is a challenging yet achievable goal. It requires a careful balance of diet, exercise, and consistency. This article will guide you through the essentials of achieving both goals simultaneously, helping you to transform your body composition effectively.
     </p>
 
-    <img src="fitness-transformation.jpg" alt="Fitness Transformation">
+    <img src="images/weight-loss.jpg" alt="Fitness Transformation">
+
+    <figcaption class="mt-2 text-center image-caption">Image Credit: <a href="https://pixabay.com/pt/users/amhnasim-21735707/" target="_blank">Designed by amhnasim</a></figcaption>
+
 
     <h2>Diet for Weight Loss and Muscle Gain</h2>
     <p>

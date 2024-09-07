@@ -10,10 +10,13 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #6d6d6d;
             color: #333;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
         header {
@@ -23,7 +26,7 @@
 
         h1 {
             font-size: 2.5em;
-            color: #000000;
+            color: #ffffff;
         }
 
         article {
@@ -46,18 +49,20 @@
         }
 
         ul {
-            list-style-type: disc;
-            margin-left: 20px;
+            list-style-type: disc; 
+            padding-left: 20px; 
+            text-align: left; 
+            margin: 0; 
         }
-
-        li {
-            margin-bottom: 10px;
+        
+        ul li {
+            margin-bottom: 10px; 
         }
 
         footer {
             text-align: center;
             margin-top: 20px;
-            color: #777;
+            color: #ffffff;
         }
         a.button {
             display: inline-block;
@@ -82,7 +87,19 @@
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 20px 0;
+            margin: 20px auto; /* Centers the image horizontally */
+            border-radius: 15px; /* Adjust the value for more or less rounded corners */
+        }
+
+        /*FIG CAPTION*/
+        .image-caption {
+            color: #8f8f8f;
+            font-size: 0.875rem
+        }
+
+        .image-caption a {
+            color: #8f8f8f;
+            text-decoration: underline
         }
 
         .warning {
@@ -106,7 +123,13 @@
 </header>
 
 <article>
+    <h2>Introduction</h2>
+
     <p>The carnivore diet is a high-protein, low-carbohydrate eating plan that focuses exclusively on animal products. It can be effective for building muscle mass when approached correctly. This article will guide you through the essentials of gaining muscle on a carnivore diet.</p>
+
+    <img src="images/carnivore.jpg" alt="Fitness Transformation">
+
+    <figcaption class="mt-2 text-center image-caption">Image Credit: <a href="https://pixabay.com/pt/users/vika-imperia550-851270/" target="_blank">Designed by vika-imperia</a></figcaption>
 
     <h2>1. Focus on High-Quality Protein Sources</h2>
     <p>Protein is essential for muscle growth, and the carnivore diet provides ample opportunities to consume high-quality protein. Prioritize the following protein-rich foods:</p>
