@@ -845,7 +845,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   color: #FFF;
   border-radius: 5px;
   padding: 10px;
-  background: rgba(24, 24, 24, 0.8); /* Added background for better visibility */
+  background: rgba(0, 0, 0, 0.8); /* Added background for better visibility */
   border: none; /* Remove border */
   width: 100%; /* Ensure full width */
 }
