@@ -575,6 +575,21 @@ h6 {
   box-shadow: -5px 6px 20px 0px rgba(88, 88, 88, 0.569);
 }
 
+/*don't have an account?*/
+
+.span {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #2d79f3;
+  font-weight: 500;
+  cursor: pointer;
+}
+.p {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  margin: 5px 0;
+}
 
 /*SIGN IN*/
 
