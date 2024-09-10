@@ -16,6 +16,48 @@
     --content-max-width: 860px;
 }
 
+/*OPTIMIZING FOR MOBILE*/
+
+form {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 10px;  /* Ensure padding on both sides */
+  box-sizing: border-box;  /* Include padding in width calculations */
+}
+
+input, select, textarea {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+header {
+  position: relative;
+  z-index: 10;  /* Ensure the header is always on top */
+}
+
+
+.menu {
+  z-index: 11;  /* Ensure the menu has a higher z-index */
+}
+
+@media (max-width: 768px) {
+  .content {
+      font-size: 16px;  /* Adjust font size for mobile */
+      padding: 10px;    /* Add padding for spacing */
+  }
+
+  img {
+      max-width: 100%;  /* Ensure images don't overflow */
+      height: auto;     /* Maintain aspect ratio */
+  }
+
+  button {
+      width: 100%;      /* Make buttons full-width on mobile */
+  }
+}
+
 /*SCROLLBAR*/
 
 html {
@@ -560,18 +602,22 @@ img {
 
 /* SCROLL TO THE TOP BUTTON */
 #scrollToTopBtn{
-    display: flex; /* Always visible */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the left */
-    width: 45px;
-    height: 45px;
-    align-items: center;
-   justify-content: center;
-    border-radius: 50%;    
-    cursor: pointer;
-    border: none;
-    background: linear-gradient(#b80a0a, #b80a0a);}
+  display: flex; /* Always visible */
+  position: fixed; /* Fixed/sticky position */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;  /* Ensure it stays on top */
+  padding: 10px;   
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;    
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(#b80a0a, #b80a0a);
+}
 
 .arrow path {
         fill: white;
