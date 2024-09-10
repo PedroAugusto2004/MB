@@ -16,7 +16,6 @@
     --content-max-width: 860px;
 }
 
-
 /*OPTIMIZING FOR MOBILE*/
 
 form {
@@ -1408,64 +1407,91 @@ input, select, textarea {
 }
 
 
-/*SIGN IN*/
+header {
+  justify-content: space-between; /* Ensures sign-in button stays on the right */
+  align-items: center;
+  background-color: #000; /* Black background for header */
+  position: relative;
+  z-index: 100; /* Ensures the header and button are visible */
+  width: 100%;
+}
 
 container {
-  position: relative;
-  width: 100%;
-  height: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .button {
+    min-width: 120px;
+    position: absolute;
+    top: 20px;  /* Adjust these values to position the button correctly */
+    right: 20px; /* Adjust these values to position the button correctly */
+    cursor: pointer;
+    font-size: 14px;
+    height: 50px;
+    gap: 10px;
+    font-weight: 600;
+    padding: 12px 17px;
+    border: 0;
+    border-radius: 7px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background: radial-gradient(
+        ellipse at bottom,
+        rgb(0, 0, 0) 0%,
+        rgb(0, 0, 0) 45%
+    );
+    color: rgba(255, 255, 255, 0.66);
+    transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .button::before {
+    content: "";
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0.2;
+    transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .button:hover {
+    color: rgb(255, 255, 255, 1);
+    transform: scale(1.1) translateY(-3px);
+  }
+  
+  .button:hover::before {
+    opacity: 1;
+  }
+  
+  header .button {
+    background-color: #111; /* Button background */
+    color: #fff; /* Button text color */
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-size: 16px;
 }
 
-.button {
-  min-width: 120px;
-  position: absolute;
-  top: 20px; 
-  right: 20px; 
-  cursor: pointer;
-  font-size: 14px;
-  height: 50px;
-  gap: 10px;
-  font-weight: 600;
-  padding: 12px 17px;
-  border: 0;
-  border-radius: 7px;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-  background: radial-gradient(
-    ellipse at bottom,
-      rgb(0, 0, 0) 0%,
-      rgb(0, 0, 0) 45%
-  );
-  color: rgba(255, 255, 255, 0.66);
-  transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
-}
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+  header {
+      padding: 10px;  /* Reduce padding for smaller screens */
+  }
 
-.button::before {
-  content: "";
-  width: 70%;
-  height: 1px;
-  position: absolute;
-  bottom: 0;
-  left: 15%;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 50%,
-      rgba(255, 255, 255, 0) 100%
-  );
-  opacity: 0.2;
-  transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+  header .button {
+      font-size: 14px; /* Slightly smaller text */
+      padding: 8px 12px; /* Adjust button padding */
+  }
 }
-
-.button:hover {
-  color: rgb(255, 255, 255, 1);
-  transform: scale(1.1) translateY(-3px);
-}
-
-.button:hover::before {
-  opacity: 1;
-}
-
 
 /*------QUOTE------*/
 .quote {
