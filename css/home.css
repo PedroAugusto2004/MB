@@ -578,6 +578,15 @@ h6 {
 
 /*SIGN IN*/
 
+header {
+  justify-content: space-between; /* Ensures sign-in button stays on the right */
+  align-items: center;
+  background-color: #000; /* Black background for header */
+  position: relative;
+  z-index: 100; /* Ensures the header and button are visible */
+  width: 100%;
+}
+
 container {
     position: relative;
     width: 100%;
@@ -634,6 +643,28 @@ container {
     opacity: 1;
   }
   
+  header .button {
+    background-color: #111; /* Button background */
+    color: #fff; /* Button text color */
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+  header {
+      padding: 10px;  /* Reduce padding for smaller screens */
+  }
+
+  header .button {
+      font-size: 14px; /* Slightly smaller text */
+      padding: 8px 12px; /* Adjust button padding */
+  }
+}
+
+
 /* MB CARD */
 
 article {
