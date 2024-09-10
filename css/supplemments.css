@@ -686,7 +686,7 @@ img {
 
 .login-box {
     position: relative; /* Changed from absolute to relative */
-    width: 400px;
+    width: 100%;
     padding: 40px;
     background: rgba(24, 20, 20, 0.987);
     box-sizing: border-box;
