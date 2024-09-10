@@ -576,6 +576,12 @@ h6 {
 }
 
 /*don't have an account?*/
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none; 
+}
 
 .span {
   font-size: 14px;
