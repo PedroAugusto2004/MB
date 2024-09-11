@@ -595,6 +595,7 @@ a:hover {
   color: black;
   font-size: 14px;
   margin: 5px 0;
+  margin-top: 20px; /* Adjust this value for more or less spacing */
 }
 
 /*SIGN IN*/
