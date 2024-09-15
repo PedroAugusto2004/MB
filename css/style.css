@@ -208,7 +208,7 @@ html {
 }
 
 .workout_video video {
-  width: 500px; /* Adjust the width */
+  width: 100%; /* Adjust the width */
   height: auto; /* Keeps the aspect ratio */
   transition: 1s;
   cursor: pointer;
