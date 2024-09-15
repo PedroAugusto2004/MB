@@ -794,7 +794,6 @@ h6 {
   border: none;
   cursor: pointer;
   margin-top: 20px;
-  background: transparent;
   transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
