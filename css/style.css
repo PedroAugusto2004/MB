@@ -757,12 +757,12 @@ h6 {
 .form-group select {
   font-size: 16px;
   padding: 0.7em;
-  outline: none;
+  outline: none; /* Removes default outline */
   color: #797979;
   border: none;
   border-bottom: 2px solid #e8e8e85d;
   background: transparent;
-  width: 100%; /* Ensure inputs take full width */
+  width: 100%;
 }
 
 .form-group label {
@@ -775,6 +775,12 @@ h6 {
   pointer-events: none;
   transition: all 0.3s ease;
   text-transform: uppercase;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-bottom: 2px solid #fff; /* Adds a custom focus state */
+  outline: none; /* Removes the outline */
 }
 
 .form-group input:focus ~ label,
