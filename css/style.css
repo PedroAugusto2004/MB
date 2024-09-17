@@ -231,6 +231,42 @@ html {
   padding: 0;
 }
 
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .workout_container {
+    height: auto; /* Let the container adjust naturally on mobile */
+    padding: 1rem; /* Add some padding for better spacing */
+  }
+
+  .workout_video {
+    width: 100%; /* Ensure full width on mobile */
+    height: auto; /* Allow the height to adjust based on width */
+    border-radius: 1rem; /* Slightly reduce the border-radius */
+  }
+
+  .workout_video video {
+    width: 100%;  
+    height: auto; /* Maintain aspect ratio for video on mobile */
+    object-fit: cover;
+  }
+}
+
+/* Additional styles for very small screens like iPhone SE */
+@media (max-width: 480px) {
+  .workout_container {
+    padding: 0.5rem; /* Reduce padding on smaller screens */
+  }
+
+  .workout_video {
+    border-radius: 0.8rem; /* Reduce corner rounding further */
+  }
+
+  .workout_video video {
+    width: 100%;  
+    height: auto; /* Make sure the video adjusts properly on small screens */
+  }
+}
+
 h6 {
   text-align: center;
 }
