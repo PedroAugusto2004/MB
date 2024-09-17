@@ -162,7 +162,7 @@ html {
         100% {
           transform: translateY(0);
           opacity: 1;
-        }
+        } 
       }
       
 /* Scroll reveal animation */
