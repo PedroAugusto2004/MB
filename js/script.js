@@ -1,3 +1,4 @@
+
 //----------CALORIES CALCULATOR----------//
 
 function calculateCalories() {
@@ -27,6 +28,53 @@ function calculateCalories() {
     document.getElementById("result").innerHTML = `Your daily caloric needs are approximately ${Math.round(dailyCalories)} calories.`;
 }
 
+//----------MACROS CALCULATOR----------//
+
+function calculateMacros() {
+    const calories = parseFloat(document.getElementById('calories').value);
+    const weight = parseFloat(document.getElementById('weight').value);
+    const goal = document.getElementById('goal').value;
+
+    // Input validation
+    if (isNaN(calories) || calories <= 0 || isNaN(weight) || weight <= 0 || !goal) {
+        document.getElementById('macroResult').innerHTML = '<p>Please enter valid inputs for all fields.</p>';
+        return;
+    }
+
+    // Adjust caloric intake based on goal
+    let adjustedCalories = calories;
+    if (goal === "lose") {
+        adjustedCalories *= 0.85; // Reduce calories by 15% for weight loss
+    } else if (goal === "gain") {
+        adjustedCalories *= 1.15; // Increase calories by 15% for muscle gain
+    }
+
+    // Carbohydrates: 45-65% of calories -> use average 55%
+    const carbCalories = adjustedCalories * 0.55;
+    const carbGrams = carbCalories / 4;
+
+    // Adjust protein intake based on goal
+    let proteinGrams;
+    if (goal === "maintain") {
+        proteinGrams = weight * 0.8; // 0.8g per kg for maintenance
+    } else if (goal === "gain") {
+        proteinGrams = weight * 1.6; // 1.6-2.2g per kg for muscle gain (using 1.6g for average)
+    } else if (goal === "lose") {
+        proteinGrams = weight * 1.2; // 1.2-1.5g per kg for weight loss (using 1.2g for average)
+    }
+
+    // Fats: 20-35% of calories -> use average 30%
+    const fatCalories = adjustedCalories * 0.30;
+    const fatGrams = fatCalories / 9;
+
+    // Display result
+    document.getElementById('macroResult').innerHTML = `
+        <p>Based on your goal: <strong>${goal.charAt(0).toUpperCase() + goal.slice(1)}</strong></p>
+        <p>Carbohydrates: ${carbGrams.toFixed(2)} grams/day</p>
+        <p>Protein: ${proteinGrams.toFixed(2)} grams/day</p>
+        <p>Fats: ${fatGrams.toFixed(2)} grams/day</p>
+    `;
+}
 
 //----------WORKOUT PLAN----------//
 
