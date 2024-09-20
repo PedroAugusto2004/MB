@@ -49,29 +49,25 @@ function calculateMacros() {
         adjustedCalories *= 1.15; // Increase calories by 15% for muscle gain
     }
 
-    // Carbohydrates: 45-55% of calories -> use average 50%
-    const carbCalories = adjustedCalories * 0.50;
-    const carbGrams = carbCalories / 4;
-
-    // Adjust protein intake based on goal
-    let proteinGrams;
+    // Adjust carbs, fats, and protein percentages based on the goal
+    let carbPercentage, fatPercentage, proteinGrams;
     if (goal === "maintain") {
+        carbPercentage = 0.45; // 40-50% for maintenance (using 45%)
+        fatPercentage = 0.25; // 25-30% for maintenance (using 25%)
         proteinGrams = weight * 0.8; // 0.8g per kg for maintenance
     } else if (goal === "gain") {
-        proteinGrams = weight * 1.6; // 1.6-2.2g per kg for muscle gain (using 1.6g for average)
+        carbPercentage = 0.42; // 40-45% for muscle gain (using 42%)
+        fatPercentage = 0.22; // 20-25% for muscle gain (using 22%)
+        proteinGrams = weight * 1.8; // 1.8-2.2g per kg for muscle gain (using 1.8g)
     } else if (goal === "lose") {
-        proteinGrams = weight * 1.2; // 1.2-1.5g per kg for weight loss (using 1.2g for average)
+        carbPercentage = 0.40; // 40-50% for weight loss (using 40%)
+        fatPercentage = 0.20; // 20-25% for weight loss (using 20%)
+        proteinGrams = weight * 1.5; // 1.2-1.5g per kg for weight loss (using 1.5g)
     }
 
-    // Adjust fat intake based on goal
-    let fatPercentage;
-    if (goal === "maintain") {
-        fatPercentage = 0.25; // 20-25% for maintenance (using 25%)
-    } else if (goal === "gain") {
-        fatPercentage = 0.25; // 20-25% for muscle gain (using 25%)
-    } else if (goal === "lose") {
-        fatPercentage = 0.20; // 20-25% for weight loss (using 20%)
-    }
+    // Calculate macronutrients based on adjusted percentages
+    const carbCalories = adjustedCalories * carbPercentage;
+    const carbGrams = carbCalories / 4;
 
     const fatCalories = adjustedCalories * fatPercentage;
     const fatGrams = fatCalories / 9;
