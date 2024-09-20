@@ -101,6 +101,11 @@
 					
 					 </p>
 	
+					 <div class="custom-text">
+						In this section on nutrition, you'll find helpful tools and resources to support your health goals. One of the key features is the calorie calculator, which lets you fill out a form to determine your daily calorie needs based on your personal objectives. Additionally, our nutrition calculator provides detailed information on the essential nutrients in any type of food.
+
+						You'll also have access to a wide range of articles covering all the important topics related to nutrition. Feel free to explore and make the most of these resources!					
+					</div>			  
 
 					 <div class="video-container">
 						<video autoplay muted loop playsinline id="background-video">
@@ -193,16 +198,14 @@
 										<li class="mb-2">Total Fat: The recommendation is 20-35% of total daily calories. For a person consuming a 2,000 calorie diet, this would translate to 44-78 grams of fat per day.</li>
 											<li class="mb-2">Saturated Fat: It is recommended to limit saturated fat intake to less than 10% of your total daily calories. For a 2,000 calorie diet, this would be about 20 grams or less of saturated fat per day.</li>
 											<li class="mb-2">Trans Fats: Trans fats should be minimized as much as possible because they are linked to increased risk of heart disease and other health issues.</li>
-											<li class="mb-2">Unsaturated Fats: Aim to consume more unsaturated fats, such as monounsaturated and polyunsaturated fats, as they can have positive health benefits. Sources of these healthy fats include nuts, seeds, avocados, and fatty fish.</li>
-
-
-				   <!-----CALORIES CALCULATOR------>
+											<li class="mb-2">Unsaturated Fats: Aim to consume more unsaturated fats, such as monounsaturated and polyunsaturated fats, as they can have positive health benefits. Sources of these healthy fats include nuts, seeds, avocados, and fatty fish.</li>																						
+				  
+					<!----- CALORIES CALCULATOR ------>
 							
 					<h5 class="my-3">Fill this form to check how much is your Calorie intake:</h5>
 
-					<h2>Calorie Calculator</h2>	
-
 					<div class="calorie-calculator">
+						<h2 class="macro-description">CALORIE CALCULATOR</h2>
 						<div class="form">
 						  <form id="calorieForm">
 							<div class="form-group">
@@ -250,7 +253,38 @@
 						  <div id="result" class="descr"></div>
 						</div>
 					  </div>
-											
+									
+					  
+					<!----- MACROS CALCULATOR ------>
+
+					<h5 class="my-3">Now, given how much calorie your gona need, fill this form to check how much is your Macronutrients intake:</h5>
+
+					<div class="macro-calculator">
+						<h2 class="macro-description">MACRONUTRIENT CALCULATOR</h2>
+						<form id="macroForm" class="macro-form">
+							<div class="macro-group">
+								<input type="number" id="calories" name="calories" required>
+								<label for="calories">Daily Caloric Intake (kcal)</label>
+							</div>
+							<div class="macro-group">
+								<input type="number" id="weight" name="weight" required>
+								<label for="weight">Weight (kg)</label>
+							</div>
+							<div class="macro-group">
+								<select id="goal" name="goal" required>
+									<option value="" disabled selected></option>
+									<option value="lose">Lose Weight</option>
+									<option value="gain">Gain Muscle</option>
+									<option value="maintain">Maintain Weight</option>
+								</select>
+								<label for="goal">Goal</label>
+							</div>
+							<button-2 type="button" class="submit-macros" onclick="calculateMacros()">CALCULATE MACROS →</button-2>
+						</form>
+					
+						<div class="macro-result" id="macroResult"></div>
+					</div>							
+												
 					<h3 class="mt-5 mb-3">Meal Planner</h3>
 
 					
