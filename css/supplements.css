@@ -115,6 +115,23 @@ body::-webkit-scrollbar-thumb:active {
     }
 }
 
+/*CUSTOM TEXT*/
+
+.custom-text {
+  font-family: 'Arial', sans-serif; /* Change to the desired font */
+  font-size: 14px; /* Adjust the size as needed */
+  color: #333; /* Text color */
+  
+  background-color: #f0f0f0; /* Background color */
+  padding: 10px 20px; /* Space inside the rectangle */
+  border-radius: 15px; /* Rounded edges */
+  
+  border: 2px solid #ccc; /* Border with a subtle color */
+  display: inline-block; /* Keep the rectangle close to the text size */
+  
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
   /* actions */
   
   .theme-switch__checkbox:checked + .theme-switch__container {
@@ -702,6 +719,8 @@ img {
   width: 100%;
   height: 0;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  border-radius: 2.0rem;
+  overflow: hidden; /* Ensure the video fits inside the rounded container */
 }
 
 .video-container video {
@@ -710,9 +729,10 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 2.0rem;
 }
 
-/*--------------------SUPPLEMMENT QUIZ-------------------*/
+/*--------------------SUPPLEMENT QUIZ-------------------*/
 
 .login-box {
   position: relative; /* Changed from absolute to relative */
