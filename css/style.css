@@ -775,25 +775,26 @@ h6 {
   position: relative;
   border-radius: 10px;
   margin: 20px auto;
-  border: 3px solid transparent;
-  background: linear-gradient(#000000, #000000) padding-box,
-  linear-gradient(145deg, transparent 35%, #831010, #831010) border-box;
-  padding: 32px 24px;
   flex-direction: column;
-  background-size: 200% 100%;
-  animation: gradient 5s ease infinite;
+  background: #000; /* Static background inside the form */
   box-shadow: rgb(0, 0, 0) 0px 3px 8px;
+
+  /* Adding the animated gradient line around the form */
+  border: 3px solid transparent;
+  background-image: linear-gradient(#000, #000), /* Static background inside */
+    linear-gradient(145deg, #831010, transparent, #831010, transparent); /* Animated gradient */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 100% 100%, 300% 300%; /* Make the gradient larger to animate */
+  animation: borderRun 2.5s linear infinite; /* Animate the gradient */
 }
 
-@keyframes gradient {
+@keyframes borderRun {
   0% {
-      background-position: 0% 50%;
-  }
-  50% {
-      background-position: 100% 50%;
+    background-position: 0% 0%, 0% 0%;
   }
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 0%, 100% 100%;
   }
 }
 
@@ -904,33 +905,32 @@ h6 {
 .calorie-calculator {
   width: 90%;
   display: flex;
-  max-width: 400px; /* Keep max width for larger devices */
-  padding: 20px; /* Reduce padding on mobile */
+  max-width: 400px;
+  padding: 20px;
   justify-content: center;
   position: relative;
   border-radius: 10px;
   margin: 20px auto;
-  border: 3px solid transparent;
-  background: linear-gradient(#000000, #000000) padding-box,
-  linear-gradient(145deg, transparent 35%,#831010, #831010) border-box; 
-  padding: 32px 24px;
   flex-direction: column;
-  background-size: 200% 100%;
-  animation: gradient 5s ease infinite;
+  background: #000; /* Static background inside the form */
   box-shadow: rgb(0, 0, 0) 0px 3px 8px;
+
+  /* Adding the animated gradient line around the form */
+  border: 3px solid transparent;
+  background-image: linear-gradient(#000, #000), /* Static background inside */
+    linear-gradient(145deg, #831010, transparent, #831010, transparent); /* Animated gradient */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 100% 100%, 300% 300%; /* Make the gradient larger to animate */
+  animation: borderRun 2.5s linear infinite; /* Animate the gradient */
 }
 
-@keyframes gradient {
+@keyframes borderRun {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%, 0% 0%;
   }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%, 100% 100%;
   }
 }
 
