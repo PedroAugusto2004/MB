@@ -3,13 +3,14 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/fireba
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
 import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js"; // Import Firestore functions
 
+// My web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  apiKey: "AIzaSyCZ0rFP7j83dQ9v1YyUwTvhOIb3ZTNbY0E",
+  authDomain: "muscles-and-balance-7.firebaseapp.com",
+  projectId: "muscles-and-balance-7",
+  storageBucket: "muscles-and-balance-7.appspot.com",
+  messagingSenderId: "679194909576",
+  appId: "1:679194909576:web:f7f3faa46293dc8359383d"
 };
 
 // Initialize Firebase and Authentication
