@@ -58,6 +58,16 @@ header {
   }
 }
 
+/* Style for the welcome message */
+.welcome-message {
+  font-size: 18px;
+  color: #ffffff; /* Change this color to your desired one */
+  font-weight: 100;
+  margin: 20px 0;
+  text-align: center;
+}
+
+
 /*SCROLLBAR*/
 
 html {
@@ -586,7 +596,7 @@ a:hover {
 .span {
   font-size: 14px;
   margin-left: 5px;
-  color: #2d79f3;
+  color: #1013b6;
   font-weight: 500;
   cursor: pointer;
 }
