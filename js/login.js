@@ -23,15 +23,27 @@ function showForgotPassword() {
 document.addEventListener('DOMContentLoaded', () => {
     const phoneInput = document.querySelector("#signup-phone");
 
+    // Define the IP info token
+    const ipInfoToken = '526cbc626b7e19';
+
     // Initialize the phone number input with country code selection
     const iti = window.intlTelInput(phoneInput, {
         initialCountry: "auto",
         geoIpLookup: function (callback) {
-            fetch('https://ipinfo.io?token=<your_token>', { headers: { 'Accept': 'application/json' } })
-                .then((resp) => resp.json())
+            fetch(`https://ipinfo.io?token=${ipInfoToken}`, { headers: { 'Accept': 'application/json' } })
+                .then((resp) => {
+                    if (!resp.ok) {
+                        throw new Error(`Failed to fetch country code: ${resp.statusText}`);
+                    }
+                    return resp.json();
+                })
                 .then((resp) => {
                     const countryCode = (resp && resp.country) ? resp.country : "us";
                     callback(countryCode);
+                })
+                .catch((error) => {
+                    console.error("Error fetching IP info:", error);
+                    callback("us"); // Fallback country code if the request fails
                 });
         },
         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js", // Ensure this is loaded
@@ -54,4 +66,3 @@ document.addEventListener('DOMContentLoaded', () => {
         handleSignUp(event);
     });
 });
-

@@ -1,7 +1,9 @@
-// Import the necessary functions from the Firebase SDK 
+// Import the necessary functions from the Firebase SDK  
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
 import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js"; // Import Firestore functions
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-analytics.js";
+import { getMessaging } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-messaging.js";
 
 // My web app's Firebase configuration
 const firebaseConfig = {
@@ -12,11 +14,12 @@ const firebaseConfig = {
   messagingSenderId: "679194909576",
   appId: "1:679194909576:web:f7f3faa46293dc8359383d"
 };
-
-// Initialize Firebase and Authentication
+// Initialize Firebase using the modular approach
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const auth = getAuth(app); // Initialize Firebase Authentication
 const db = getFirestore(app); // Initialize Firestore
+const analytics = getAnalytics(app);
+const messaging = getMessaging(app);
 
 // Function to show a custom alert with a specified message and type (e.g., success, error)
 function showAlert(message, type = 'info') {
