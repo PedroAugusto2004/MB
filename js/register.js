@@ -7,12 +7,12 @@ import { getMessaging } from "https://www.gstatic.com/firebasejs/10.14.0/firebas
 
 // My web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCZ0rFP7j83dQ9v1YyUwTvhOIb3ZTNbY0E",
-  authDomain: "muscles-and-balance-7.firebaseapp.com",
-  projectId: "muscles-and-balance-7",
-  storageBucket: "muscles-and-balance-7.appspot.com",
-  messagingSenderId: "679194909576",
-  appId: "1:679194909576:web:f7f3faa46293dc8359383d"
+  //apiKey: 
+  //authDomain: 
+  //projectId: 
+  //storageBucket: 
+  //messagingSenderId: 
+  //appId: 
 };
 // Initialize Firebase using the modular approach
 const app = initializeApp(firebaseConfig);
