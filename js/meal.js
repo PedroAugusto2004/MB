@@ -44,8 +44,8 @@ document.getElementById('mealForm').addEventListener('submit', function(e) {
 });
 
 async function getNutritionData(foodItems) {
-    const apiKey = 'dc176e1bce2d7f71f403b8716d4edd5c';
-    const appId = '92b2b0f1';
+    const apiKey = '';
+    const appId = '';
     let totalCalories = 0;
     let totalProteins = 0;
     let totalFats = 0;
